@@ -40,6 +40,15 @@ ArrayList<MyHashMap<K,V>> bucketArray;
         }
 
     }
+    public void remove(K key){
+        int index=getIndex(key);
+        if(bucketArray.get(index)==null) System.out.println("key does not exist");
+        else {
+            if(bucketArray.get(index).get(key)==null) System.out.println("key does not exist");
+            else  bucketArray.get(index).remove(key);
+        }
+    }
+
 
     public void printMap(){
         for(int index=0;index<numBucket;index++){

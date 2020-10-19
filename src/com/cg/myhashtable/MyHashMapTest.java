@@ -21,8 +21,8 @@ public class MyHashMapTest {
                 myLinkedHashMap.add(word,frequency);
             }
         }
-        Integer expected=3;
-        Assert.assertEquals(expected,myLinkedHashMap.get("paranoid"));
+        myLinkedHashMap.remove("avoidable");
+        Assert.assertEquals(null,myLinkedHashMap.get("avoidable"));
 
     }
 }

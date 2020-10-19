@@ -1,6 +1,5 @@
 package com.cg.myhashtable;
-
-public class MyHashMap<K,V>  {
+public class MyHashMap<K,V> {
     MapNode head=null;
 
     public void add(K key, V value){
@@ -38,7 +37,7 @@ public class MyHashMap<K,V>  {
 
 
 
-    public void printList(){
+    public void printMap(){
         if(head==null) System.out.println("HashMap empty");
         else{
             MapNode node=head;

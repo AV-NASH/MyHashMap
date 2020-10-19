@@ -8,21 +8,21 @@ import static org.junit.Assert.*;
 public class MyHashMapTest {
     @Test
     public void whenGivenSentence_storeFrequencyofWords_inKeyValuePair(){
-        MyHashMap<String,Integer> myHashMap=new MyHashMap<String, Integer>();
-        String sampleString="To be or not to be";
+        MyLinkedHashMap<String,Integer> myLinkedHashMap=new MyLinkedHashMap<String, Integer>();
+        String sampleString="Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
         String[] wordArray=sampleString.toLowerCase().split(" ");
         for(String word:wordArray){
             Integer frequency=1;
-            if(myHashMap.get(word)==null){
-                myHashMap.add(word,frequency);
+            if(myLinkedHashMap.get(word)==null){
+                myLinkedHashMap.add(word,frequency);
             }
             else{
-                frequency= myHashMap.get(word)+frequency;
-                myHashMap.add(word,frequency);
+                frequency= myLinkedHashMap.get(word)+frequency;
+                myLinkedHashMap.add(word,frequency);
             }
         }
-        Integer expected=2;
-        Assert.assertEquals(expected,myHashMap.get("to"));
+        Integer expected=3;
+        Assert.assertEquals(expected,myLinkedHashMap.get("paranoid"));
 
     }
 }
